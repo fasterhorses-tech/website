@@ -1,0 +1,17 @@
+{
+  "navbar": {
+    "info": "Info",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "imprint": "Impressum"
+  },
+  "language": {
+    "de": "DE",
+    "en": "EN"
+  },
+  "home": {
+    "title": "Willkommen"
+  }
+}
