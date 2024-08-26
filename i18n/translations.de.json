@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "info": "Info",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "legal": "Rechtliches"
+  },
+  "language": {
+    "de": "DE",
+    "en": "EN"
+  },
+  "home": {
+    "hero": {
+      "1": "Wir entwickeln",
+      "2": "schöne",
+      "3": "intelligente",
+      "4": "Softwaresysteme",
+      "5": "mit",
+      "6": "Liebe",
+      "7": "und",
+      "8": "Sorgfalt",
+      "9": "die Ihren Bedürfnissen entsprechen"
+    }
+  }
+}

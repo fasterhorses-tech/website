@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "info": "Info",
+    "contact": "Contact"
+  },
+  "footer": {
+    "legal": "Legal"
+  },
+  "language": {
+    "de": "DE",
+    "en": "EN"
+  },
+  "home": {
+    "hero": {
+      "1": "We craft",
+      "2": "beautiful",
+      "3": "intelligent",
+      "4": "software systems",
+      "5": "with",
+      "6": "love",
+      "7": "and",
+      "8": "care",
+      "9": "that fit your needs"
+    }
+  }
+}
