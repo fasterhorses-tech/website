@@ -17,10 +17,25 @@
       "3": "intelligent",
       "4": "software systems",
       "5": "with",
-      "6": "love",
+      "6": "expertise",
       "7": "and",
       "8": "care",
       "9": "that fit your needs"
+    }
+  },
+  "legal": {
+    "title": "Legal",
+    "imprint": {
+      "title": "Imprint",
+      "content": "Operated by Faster Horses Technologies SRL (in formation)."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "content": "No personal data is processed."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "No cookies are used."
     }
   }
 }

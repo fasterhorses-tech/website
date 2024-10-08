@@ -28,9 +28,7 @@
 - do we use the orange-600 color as accent?
 - reduced legal shit into one page
 - next:
-  - add legal information (low prio)
-  - fix dark mode toggle icon situation (icon is not visible and alignment with links is off vertically)
-  - find / try out design elements that work
+  - find / try out recurring design elements that work (squares? shapes?)
   - see if the font is working out, maybe change? do we want a more "architecture" look?
   - add more sections to the home page
   - check out the structure of the browser company - shall we add a prominent value section?
@@ -39,6 +37,17 @@
   - for that matter, add a this is your challenge, this is our solution section, protentially with different challenges - classify yourself or w/e
   - emphasize "intelligent" and cutting edge to the core! we are new, we are young, we are close to the science, we are close to the future!
   - get more feedback - mito? christian? tektit? truenode? zuzanna?
+  - fix alignment of footer link texts (low prio)
+  - add legal information (low prio)
 - longer term:
   - add fathom analytics (?) & copy the cookie disclaimer from them
   - copy over my blog posts / create new ones (?)
+
+
+# NB
+
+- green 500
+- yellow 500
+- orange 600
+- red 600
+- rose 600

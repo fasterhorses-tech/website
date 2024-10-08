@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { HalfTwoIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import { Half2Icon } from '@radix-ui/react-icons';
+
 
 export default function DarkModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -22,12 +24,17 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+    <Link
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        toggleTheme();
+      }}
+      className="ml-4 p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 group"
       aria-label="Toggle theme"
     >
-      {/* <HalfTwoIcon className="w-4 h-4" /> */}
-    </button>
+      {/* <Half2Icon className="w-4 h-4 group-hover:scale-x-[-1]" /> */}
+      <Half2Icon className="w-4 h-4" />
+    </Link>
   );
 }

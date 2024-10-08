@@ -22,20 +22,23 @@ export default function Footer({ lang, languages, links }) {
     .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
 
   return (
-    <footer className="container mx-auto px-4 py-4">
-      <div className="flex justify-between items-center text-sm">
+    <footer className="container mx-auto px-4 fixed bottom-0 left-0 right-0 bg-gradient-to-b from-background/0 via-background/70 to-background/100 h-24 flex flex-col justify-end">
+      <div className="flex justify-between items-center text-sm pb-2">
         <div className="flex space-x-4">
           {links.map((link) => (
-            <Link href={link.url} key={link.url} className="text-gray-600 hover:text-orange-600">
+            <Link href={link.url} key={link.url} className="text-gray-600 hover:text-orange-600 dark:text-gray-400">
               {link.text}
             </Link>
           ))}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center text-gray-600 dark:text-gray-400">
           {langs.map(({ code, name, path, isCurrent }, index) => (
             <>
               {index > 0 && <span className="mx-1">|</span>}
-              {isCurrent ? <span className="text-orange-600">{name}</span> : <Link href={path} key={code} className={`text-gray-600 hover:text-orange-600 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>}
+              {isCurrent ?
+                <span className="text-orange-600">{name}</span> :
+                <Link href={path} key={code} className={`text-gray-600 hover:text-orange-600 dark:text-gray-400 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>
+              }
             </>
           ))}
           <DarkModeToggle />
