@@ -1,8 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "The Good Software Company",
-  description: "We craft beautiful, intelligent software systems with love and care that fit your needs",
+  title: "Faster Horses Technologies",
+  description: "We craft beautiful, intelligent software systems with expertise and care that fit your needs",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {

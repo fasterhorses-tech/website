@@ -5,7 +5,7 @@ export default function getNavBar(lang) {
   const { t, tURL } = useTranslation(lang);
 
   const links = [
-    { url: tURL('/info'), text: t('navbar.info') },
+    // { url: tURL('/info'), text: t('navbar.info') },
     { url: tURL('/contact'), text: t('navbar.contact') }
   ];
 

@@ -35,7 +35,7 @@ export default function Page({ params: { lang } }) {
           <div className="absolute -right-[-3%] bottom-[10%] w-[30vh] h-[30vh] bg-orange-600 transform rotate-[30deg] origin-bottom-right"></div>
         </section>
         
-        <section className="py-24">
+        {/* <section className="py-24">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <CardGrid cardData={cardData} />
           </div>
@@ -70,7 +70,7 @@ export default function Page({ params: { lang } }) {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       {footer}
     </div>

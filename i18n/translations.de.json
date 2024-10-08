@@ -23,8 +23,11 @@
       "9": "die Ihren Bedürfnissen entsprechen"
     }
   },
+  "contact": {
+    "content": "Kontaktieren Sie uns gern unter",
+    "email": "info@fasterhorses.tech"
+  },
   "legal": {
-    "title": "Rechtliches",
     "imprint": {
       "title": "Impressum",
       "content": "Betrieben von Faster Horses Technologies SRL (in Gründung)."

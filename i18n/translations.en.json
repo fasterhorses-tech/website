@@ -23,8 +23,11 @@
       "9": "that fit your needs"
     }
   },
+  "contact": {
+    "content": "Contact us at",
+    "email": "info@fasterhorses.tech"
+  },
   "legal": {
-    "title": "Legal",
     "imprint": {
       "title": "Imprint",
       "content": "Operated by Faster Horses Technologies SRL (in formation)."
