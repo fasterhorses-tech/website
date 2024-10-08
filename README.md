@@ -48,6 +48,6 @@
 
 - green 500
 - yellow 500
-- orange 600
+- orange 600 - #ea580c
 - red 600
 - rose 600
