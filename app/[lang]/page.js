@@ -5,8 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import CardGrid from '@/components/CardGrid';
 
 export const generateStaticParams = () => {
-  return getAllLanguages()
-    .map((lang) => ({ params: { lang } }));
+  return getAllLanguages().map((lang) => ({ lang }));
 }
 
 export default function Page({ params: { lang } }) {

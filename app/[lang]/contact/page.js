@@ -3,8 +3,7 @@ import getFooter from "@/components/footer/getFooter"
 import { getAllLanguages, useTranslation } from "@/i18n";
 
 export const generateStaticParams = () => {
-  return getAllLanguages()
-    .map((lang) => ({ params: { lang } }));
+  return getAllLanguages().map((lang) => ({ lang }));
 }
 
 export default function Legal({ params: { lang } }) {
