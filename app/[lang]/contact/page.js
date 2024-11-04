@@ -27,6 +27,24 @@ export default function Legal({ params: { lang } }) {
               </span>
             </p>
           </section>
+          <section>
+            {/* Google Calendar Appointment Scheduling begin */}
+            <p className="text-lg mb-4">
+              {t('contact.calendar')}
+            </p>
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3z5yaG6m7gUrmlGtObocrCZD_rg8v1_oRuv6Ll2C1PPrnKe34Ud3qJAubl5niFZp6QxKtKdRg3?gv=true"
+              style={{
+                border: '1px solid var(--orange-600)',
+                borderRadius: '10px',
+                boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+              }}
+              width="100%"
+              height="600"
+              frameBorder="0"
+            ></iframe>
+            {/* end Google Calendar Appointment Scheduling */}
+          </section>
         </div>
       </main>
       {footer}
