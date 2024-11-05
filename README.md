@@ -44,7 +44,7 @@
   - copy over my blog posts / create new ones (?)
 
 
-# NB
+# NB.
 
 - green 500
 - yellow 500
