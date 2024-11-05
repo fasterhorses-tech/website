@@ -1,6 +1,7 @@
 import getNavBar from "@/components/navbar/getNavBar"
 import getFooter from "@/components/footer/getFooter"
 import { getAllLanguages, useTranslation } from "@/i18n";
+import Markdown from 'markdown-to-jsx';
 
 export const generateStaticParams = () => {
   return getAllLanguages().map((lang) => ({ lang }));
@@ -19,17 +20,17 @@ export default function Legal({ params: { lang } }) {
         <div className="container max-w-4xl mx-auto px-4 py-16">
           <section className="mb-12">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{t('legal.imprint.title')}</h2>
-            <p className="text-lg">{t('legal.imprint.content')}</p>
+            <p className="text-lg"><Markdown>{t('legal.imprint.content')}</Markdown></p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{t('legal.privacy.title')}</h2>
-            <p className="text-lg">{t('legal.privacy.content')}</p>
+            <p className="text-lg"><Markdown>{t('legal.privacy.content')}</Markdown></p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{t('legal.cookies.title')}</h2>
-            <p className="text-lg">{t('legal.cookies.content')}</p>
+            <p className="text-lg"><Markdown>{t('legal.cookies.content')}</Markdown></p>
           </section>
         </div>
       </main>
