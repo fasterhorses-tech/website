@@ -43,6 +43,14 @@
   - add fathom analytics (?) & copy the cookie disclaimer from them
   - copy over my blog posts / create new ones (?)
 
+# Deployment
+
+- This was supposed to use github's actions to deploy to gh-pages, but that didn't work correctly. (Build didn't run through because of some dependency issue that I can't reproduce locally.)
+- For now, the deployment works as follows:
+  - locally, run `npx next build`
+  - commit all changes to the out folder
+  - push to main
+  - github actions takes over and deploys to github pages
 
 # NB.
 

@@ -23,6 +23,7 @@ jobs:
   #     - name: Checkout 🛎️
   #       uses: actions/checkout@v4
 
+  # This for some reason fails to build when I deploy it (JSA) even though it works locally
   #     - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
   #       uses: ./.github/workflows/setup-node
 
@@ -45,9 +46,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
-    # needs: build
 
     steps:
+      # All steps until the deploy steps are just copied from above because
+      # it seems to be necessary to make a deploy from the out folder work.
+      # Note that this means we have to do a manual build locally before deploying,
+      # and commit all changes to the out folder to make it work.
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
@@ -61,6 +65,7 @@ jobs:
         with:
           path: ./out
 
+      # This apparently needs an artifact, I'm not sure why - that's why we upload one above
       - name: Deploy to GitHub Pages 🚀
         id: deployment
         uses: actions/deploy-pages@v4
