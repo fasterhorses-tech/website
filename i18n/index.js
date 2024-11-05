@@ -1,5 +1,5 @@
-import en from './translations.en.json';
-import de from './translations.de.json';
+import en from './translations.en.js';
+import de from './translations.de.js';
 
 const i18n = {
   translations: {

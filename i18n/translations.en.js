@@ -1,4 +1,4 @@
-{
+const translations = {
   "navbar": {
     "info": "Info",
     "contact": "Contact"
@@ -25,12 +25,19 @@
   },
   "contact": {
     "content": "Contact us at",
-    "email": "info@fasterhorses.tech"
+    "email": "info@fasterhorses.tech",
+    "calendar": "Or schedule a meeting directly:"
   },
   "legal": {
     "imprint": {
       "title": "Imprint",
-      "content": "Operated by Faster Horses Technologies SRL (in formation)."
+      "content": [
+        "Operated by:",
+        "",
+        "&nbsp;&nbsp;&nbsp;&nbsp;Faster Horses Technologies SRL",
+        "&nbsp;&nbsp;&nbsp;&nbsp;C. Bolliac 31",
+        "&nbsp;&nbsp;&nbsp;&nbsp;300316 Timișoara, Romania" 
+      ].join('<br/>')
     },
     "privacy": {
       "title": "Privacy",
@@ -41,4 +48,6 @@
       "content": "No cookies are used."
     }
   }
-}
+}; 
+
+export default translations;
