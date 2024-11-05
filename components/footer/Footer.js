@@ -33,13 +33,13 @@ export default function Footer({ lang, languages, links }) {
         </div>
         <div className="flex items-center text-gray-600 dark:text-gray-400">
           {langs.map(({ code, name, path, isCurrent }, index) => (
-            <>
+            <div key={code}>
               {index > 0 && <span className="mx-1">|</span>}
               {isCurrent ?
                 <span className="text-orange-600">{name}</span> :
-                <Link href={path} key={code} className={`text-gray-600 hover:text-orange-600 dark:text-gray-400 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>
+                <Link href={path} className={`text-gray-600 hover:text-orange-600 dark:text-gray-400 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>
               }
-            </>
+            </div>
           ))}
           <DarkModeToggle />
         </div>

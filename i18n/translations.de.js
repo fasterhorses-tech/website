@@ -1,4 +1,4 @@
-export const translations = {
+const translations = {
   navbar: {
     info: "Info",
     contact: "Kontakt"
@@ -25,7 +25,8 @@ export const translations = {
   },
   contact: {
     content: "Kontaktieren Sie uns gern unter",
-    email: "info@fasterhorses.tech"
+    email: "info@fasterhorses.tech",
+    calendar: "Oder vereinbaren Sie direkt einen Termin:"
   },
   legal: {
     imprint: {

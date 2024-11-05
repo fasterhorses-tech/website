@@ -1,4 +1,5 @@
 import getNavBar from "@/components/navbar/getNavBar"
+import getCalendar from "@/components/calendar/getCalendar"
 import getFooter from "@/components/footer/getFooter"
 import { getAllLanguages, useTranslation } from "@/i18n";
 
@@ -10,7 +11,9 @@ export default function Legal({ params: { lang } }) {
   const { t } = useTranslation(lang);
 
   const navbar = getNavBar(lang);
+  const calendar = getCalendar('https://calendar.google.com/calendar/appointments/schedules/AcZssZ3z5yaG6m7gUrmlGtObocrCZD_rg8v1_oRuv6Ll2C1PPrnKe34Ud3qJAubl5niFZp6QxKtKdRg3?gv=true');
   const footer = getFooter(lang);
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,6 +29,12 @@ export default function Legal({ params: { lang } }) {
                 </a>
               </span>
             </p>
+          </section>
+          <section>
+            <p className="text-lg mb-4">
+              {t('contact.calendar')}
+            </p>
+            {calendar}
           </section>
         </div>
       </main>
