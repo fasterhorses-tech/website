@@ -1,6 +1,7 @@
 import getNavBar from "@/components/navbar/getNavBar"
 import getFooter from "@/components/footer/getFooter"
 import { getAllLanguages, useTranslation } from "@/i18n";
+import useDarkMode from "@/hooks/useDarkMode";
 
 export const generateStaticParams = () => {
   return getAllLanguages().map((lang) => ({ lang }));
@@ -11,6 +12,10 @@ export default function Legal({ params: { lang } }) {
 
   const navbar = getNavBar(lang);
   const footer = getFooter(lang);
+
+  console.log('wtf', useDarkMode);
+  // const isDarkMode = useDarkMode();
+  const isDarkMode = true;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -39,6 +44,7 @@ export default function Legal({ params: { lang } }) {
                 borderRadius: '10px',
                 boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
                 backgroundColor: 'white',
+                filter:isDarkMode ? 'invert(90%)' : 'none', 
               }}
               width="100%"
               height="600"
