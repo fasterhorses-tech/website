@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ThemeProvider } from 'next-themes'
 
 export const metadata = {
   title: "Faster Horses Technologies",
@@ -10,8 +11,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
