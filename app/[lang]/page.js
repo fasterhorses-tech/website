@@ -14,12 +14,12 @@ export default function Page({ params: { lang } }) {
   const navbar = getNavBar(lang);
   const footer = getFooter(lang);
 
-  const cardData = [
-    { title: "Dignity and Rights", content: "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood." },
-    { title: "Freedom from Discrimination", content: "Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status." },
-    { title: "Right to Life and Liberty", content: "Everyone has the right to life, liberty and security of person." },
-    { title: "Freedom from Slavery", content: "No one shall be held in slavery or servitude; slavery and the slave trade shall be prohibited in all their forms." }
-  ];
+  const cardData = t('home.intro_cards')
+  //   { title: "Dignity and Rights", content: "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood." },
+  //   { title: "Freedom from Discrimination", content: "Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status." },
+  //   { title: "Right to Life and Liberty", content: "Everyone has the right to life, liberty and security of person." },
+  //   { title: "Freedom from Slavery", content: "No one shall be held in slavery or servitude; slavery and the slave trade shall be prohibited in all their forms." }
+  // ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -34,13 +34,13 @@ export default function Page({ params: { lang } }) {
           <div className="absolute -right-[-3%] bottom-[10%] w-[30vh] h-[30vh] bg-orange-600 transform rotate-[30deg] origin-bottom-right"></div>
         </section>
         
-        {/* <section className="py-24">
+        <section className="py-24">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <CardGrid cardData={cardData} />
           </div>
         </section>
 
-        <section className="py-24 bg-gray-100">
+        {/* <section className="py-24 bg-gray-100">
           <div className="container mx-auto px-8 sm:px-12 lg:px-16">
             <div className="flex flex-col lg:flex-row gap-12">
               <div className="lg:w-1/2">
