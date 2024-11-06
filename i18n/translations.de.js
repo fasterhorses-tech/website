@@ -41,19 +41,19 @@ const translations = {
         ].join(' ')
       },
       {
-        title: "Wir sind ein Boutique-Team mit Absicht.",
+        title: "Wir sind eine Boutique - mit Absicht.",
         content: [
-          "Wie kann ein kleines Team ein komplexes Softwaresystem entwickeln?",
-          "Indem wir <em>Jahrzehnte Erfahrung</em> mit den <em>besten AI-Tools</em> kombinieren.",
-          "Für Sie bedeutet das 10x-Produktivität, ohne die Kosten für eine 10x-Teamkoordination."
+          "Wie entwickelt ein kleines Team ein komplexes Softwaresystem?",
+          "Indem wir Jahrzehnte an Erfahrung mit den besten AI-Tools kombinieren.",
+          "Das bedeutet <em>Produktivität von 10 Personen</em>, ohne die entsprechenden Overhead-Kosten."
         ].join(' ')
       },
       {
-        title: "Bleiben Sie nahe bei der Wissenschaft.",
+        title: "Gehen Sie Richtung Zukunft.",
         content: [
           "Ihr Unternehmen sollte Zugang zu den besten Technologien haben - mit nahtloser Integration.",
-          "Von <em>maschinellem Lernen</em> über <em>generativer KI</em> und hochmodernen Webtechnologien.",
-          "Wir sind Ihre Schnittstelle zur Zukunft von Tech."
+          "Von <em>maschinellem Lernen</em> über <em>generativer KI</em> zu modernen Webframeworks.",
+          "Wir machen es möglich."
         ].join(' ')
       },
     ]

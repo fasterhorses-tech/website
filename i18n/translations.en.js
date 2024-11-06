@@ -44,16 +44,16 @@ const translations = {
         title: "We're small on purpose.",
         content: [
           "How can a tiny team build a complex software system?",
-          "By combining <em>decades of experience</em> with the <em>best AI tools</em> available.",
-          "You get the 10x output, without paying for the 10x coordination overhead."
+          "By combining decades of experience with the best AI tools available.",
+          "You get the <em>output of a 10 person team</em>, without paying for the overhead."
         ].join(' ')
       },
       {
         title: "Keep in touch with science.",
         content: [
           "Your business deserves the best technology available - seamlessly integrated.",
-          "From <em>machine learning</em> to <em>generative AI</em> to high-end web technologies.",
-          "We are your link to the latest advancements in technology."
+          "From <em>machine learning</em> to <em>generative AI</em> to modern web technologies.",
+          "We are your link to the latest advancements."
         ].join(' ')
       },
     ]
