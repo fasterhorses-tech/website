@@ -21,7 +21,42 @@ const translations = {
       7: "und",
       8: "Sorgfalt",
       9: "die Ihren Bedürfnissen entsprechen"
-    }
+    },
+    intro_cards: [
+      {
+        title: "Was wir tun, hängt von Ihnen ab.",
+        content: [
+          "Unsere Lösungen sind <em>auf Ihre Bedürfnisse zugeschnitten</em>.",
+          "Sie haben die Prozesse - wir haben AI-Automatisierungen.",
+          "Sie haben die Daten - wir haben statistische Analysen.",
+          "Sie haben die Produktidee - wir bringen Innovation."
+        ].join(' ')
+      },
+      {
+        title: "Wir fertigen Ihre Lösung von Hand.",
+        content: [
+          "Software hoher Qualität erfordert ein hohes Maß an <em>Handwerk</em>, <em>Erfahrung</em> und <em>Sorgfalt</em>.",
+          "Genau das ist unser Ansatz bei der Entwicklung intelligenter Softwaresysteme.",
+          "Jedes Systemmodul, jede Zeile Code ist genau so, wie sie sein soll."
+        ].join(' ')
+      },
+      {
+        title: "Wir sind ein Boutique-Team mit Absicht.",
+        content: [
+          "Wie kann ein kleines Team ein komplexes Softwaresystem entwickeln?",
+          "Indem wir <em>Jahrzehnte Erfahrung</em> mit den <em>besten AI-Tools</em> kombinieren.",
+          "Für Sie bedeutet das 10x-Produktivität, ohne die Kosten für eine 10x-Teamkoordination."
+        ].join(' ')
+      },
+      {
+        title: "Bleiben Sie nahe bei der Wissenschaft.",
+        content: [
+          "Ihr Unternehmen sollte Zugang zu den besten Technologien haben - mit nahtloser Integration.",
+          "Von <em>maschinellem Lernen</em> über <em>generativer KI</em> und hochmodernen Webtechnologien.",
+          "Wir sind Ihre Schnittstelle zur Zukunft von Tech."
+        ].join(' ')
+      },
+    ]
   },
   contact: {
     content: "Kontaktieren Sie uns gern unter",

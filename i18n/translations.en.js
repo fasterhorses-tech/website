@@ -43,9 +43,9 @@ const translations = {
       {
         title: "We're small on purpose.",
         content: [
-          "We're a small team that packs a punch - <em>condensed efficiency and productivity</em>",
-          "at a fair price. The secret to our 10x output? Decades of experience,",
-          "combined with the best tools and practices available.",
+          "How can a tiny team build a complex software system?",
+          "By combining <em>decades of experience</em> with the <em>best AI tools</em> available.",
+          "You get the 10x output, without paying for the 10x coordination overhead."
         ].join(' ')
       },
       {
