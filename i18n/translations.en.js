@@ -21,7 +21,42 @@ const translations = {
       7: "and",
       8: "care",
       9: "that fit your needs"
-    }
+    },
+    intro_cards: [
+      {
+        title: "What we do depends on you.",
+        content: [
+          "Our solutions are <em>tailored to your needs</em>.",
+          "You have the processes - we have AI automations.",
+          "You have the data - we have statistical analysis.",
+          "You have the product idea - we innovate, together."
+        ].join(' ')
+      },
+      {
+        title: "We hand-craft your solution.",
+        content: [
+          "High quality software requires a high level of <em>craftsmanship</em>, <em>expertise</em> and <em>care</em>.",
+          "Exactly that is our approach to creating intelligent software systems.",
+          "Every system module, every line of code is exactly as it should be."
+        ].join(' ')
+      },
+      {
+        title: "We're small on purpose.",
+        content: [
+          "How can a tiny team build a complex software system?",
+          "By combining decades of experience with the best AI tools available.",
+          "You get the <em>output of a 10 person team</em>, without paying for the overhead."
+        ].join(' ')
+      },
+      {
+        title: "Keep in touch with science.",
+        content: [
+          "Your business deserves the best technology available - seamlessly integrated.",
+          "From <em>machine learning</em> to <em>generative AI</em> to modern web technologies.",
+          "We are your link to the latest advancements."
+        ].join(' ')
+      },
+    ]
   },
   contact: {
     content: "Contact us at",

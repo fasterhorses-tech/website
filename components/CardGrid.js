@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import DesignElement from './DesignElement';
+import Markdown from 'markdown-to-jsx';
 
 export default function CardGrid({ cardData }) {
   return (
@@ -22,7 +23,7 @@ export default function CardGrid({ cardData }) {
               <CardTitle>{card.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{card.content}</p>
+              <Markdown>{'<p>' + card.content + '</p>'}</Markdown>
             </CardContent>
           </Card>
         );
