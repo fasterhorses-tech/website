@@ -29,7 +29,7 @@ export default function Calendar({ url }) {
     <iframe
       src={url}
       style={{
-        border: '1px solid var(--orange-600)',
+        border: '1px solid gray',
         borderRadius: '10px',
         boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
         backgroundColor: 'white',

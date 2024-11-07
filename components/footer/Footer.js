@@ -26,7 +26,7 @@ export default function Footer({ lang, languages, links }) {
       <div className="flex justify-between items-center text-sm pb-2">
         <div className="flex space-x-4">
           {links.map((link) => (
-            <Link href={link.url} key={link.url} className="text-gray-600 hover:text-orange-600 dark:text-gray-400">
+            <Link href={link.url} key={link.url} className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-600">
               {link.text}
             </Link>
           ))}
@@ -37,7 +37,7 @@ export default function Footer({ lang, languages, links }) {
               {index > 0 && <span className="mx-1">|</span>}
               {isCurrent ?
                 <span className="text-orange-600">{name}</span> :
-                <Link href={path} className={`text-gray-600 hover:text-orange-600 dark:text-gray-400 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>
+                <Link href={path} className={`text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-600 ${isCurrent ? 'font-bold' : ''}`}>{name}</Link>
               }
             </div>
           ))}
