@@ -35,9 +35,9 @@ const translations = {
       {
         title: "We hand-craft your solution.",
         content: [
-          "High quality software requires a high level of <em>craftsmanship</em>, <em>expertise</em> and <em>care</em>.",
-          "Exactly that is our approach to creating intelligent software systems.",
-          "Every system module, every line of code is exactly as it should be."
+          "High quality software requires a high level of <em>artisanry</em>, <em>expertise</em> and <em>care</em>.",
+          "That is our approach to creating intelligent software systems.",
+          "Every module, every line of code is exactly as it should be."
         ].join(' ')
       },
       {
