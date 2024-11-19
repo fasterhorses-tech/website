@@ -1,14 +1,14 @@
 const translations = {
   navbar: {
     info: "Info",
-    contact: "Contact"
+    contact: "Contact",
   },
   footer: {
-    legal: "Legal"
+    legal: "Legal",
   },
   language: {
     de: "DE",
-    en: "EN"
+    en: "EN",
   },
   home: {
     hero: {
@@ -20,7 +20,7 @@ const translations = {
       6: "expertise",
       7: "and",
       8: "care",
-      9: "that fit your needs"
+      9: "that fit your needs",
     },
     intro_cards: [
       {
@@ -29,39 +29,39 @@ const translations = {
           "Our solutions are <em>tailored to your needs</em>.",
           "You have the processes - we have AI automations.",
           "You have the data - we have statistical analysis.",
-          "You have the product idea - we innovate, together."
-        ].join(' ')
+          "You have the product idea - we innovate, together.",
+        ].join(" "),
       },
       {
         title: "We hand-craft your solution.",
         content: [
           "High quality software requires a high level of <em>artisanry</em>, <em>expertise</em> and <em>care</em>.",
           "That is our approach to creating intelligent software systems.",
-          "Every module, every line of code is exactly as it should be."
-        ].join(' ')
+          "Every module, every line of code is exactly as it should be.",
+        ].join(" "),
       },
       {
         title: "We're small on purpose.",
         content: [
           "How can a tiny team build a complex software system?",
           "By combining decades of experience with the best AI tools available.",
-          "You get the <em>output of a 10 person team</em>, without paying for the overhead."
-        ].join(' ')
+          "You get the <em>output of a 10 person team</em>, without paying for the overhead.",
+        ].join(" "),
       },
       {
         title: "Keep in touch with science.",
         content: [
           "Your business deserves the best technology available - seamlessly integrated.",
           "From <em>machine learning</em> to <em>generative AI</em> to modern web technologies.",
-          "We are your link to the latest advancements."
-        ].join(' ')
+          "We are your link to the latest advancements.",
+        ].join(" "),
       },
-    ]
+    ],
   },
   contact: {
     content: "Contact us at",
     email: "info@fasterhorses.tech",
-    calendar: "Or schedule a meeting directly:"
+    calendar: "Or schedule a meeting directly:",
   },
   legal: {
     imprint: {
@@ -74,18 +74,19 @@ const translations = {
         "&nbsp;&nbsp;&nbsp;&nbsp;300316 Timișoara, Romania",
         "",
         "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ20240313450008",
-        "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538"
-      ].join('<br/>')
+        "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538",
+      ].join("<br/>"),
     },
     privacy: {
       title: "Privacy",
-      content: "No personal data is processed."
+      content:
+        "We respect your privacy and ensure compliance with the General Data Protection Regulation (GDPR). Currently, we do not collect, process, or store personal data on this website. For more details, please contact us via the information provided in our contact section.",
     },
     cookies: {
       title: "Cookies",
-      content: "No cookies are used."
-    }
-  }
-}; 
+      content: "No cookies are used.",
+    },
+  },
+};
 
 export default translations;

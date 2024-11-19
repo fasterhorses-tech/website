@@ -1,14 +1,14 @@
 const translations = {
   navbar: {
     info: "Info",
-    contact: "Kontakt"
+    contact: "Kontakt",
   },
   footer: {
-    legal: "Rechtliches"
+    legal: "Rechtliches",
   },
   language: {
     de: "DE",
-    en: "EN"
+    en: "EN",
   },
   home: {
     hero: {
@@ -20,7 +20,7 @@ const translations = {
       6: "Expertise",
       7: "und",
       8: "Sorgfalt",
-      9: "die Ihren Bedürfnissen entsprechen"
+      9: "die Ihren Bedürfnissen entsprechen",
     },
     intro_cards: [
       {
@@ -29,39 +29,39 @@ const translations = {
           "Unsere Lösungen sind <em>auf Ihre Bedürfnisse zugeschnitten</em>.",
           "Sie haben die Prozesse - wir haben AI-Automatisierungen.",
           "Sie haben die Daten - wir haben statistische Analysen.",
-          "Sie haben die Produktidee - wir bringen Innovation."
-        ].join(' ')
+          "Sie haben die Produktidee - wir bringen Innovation.",
+        ].join(" "),
       },
       {
         title: "Wir fertigen Ihre Lösung von Hand.",
         content: [
           "Software hoher Qualität erfordert ein hohes Maß an <em>Handwerk</em>, <em>Erfahrung</em> und <em>Sorgfalt</em>.",
           "Genau das ist unser Ansatz bei der Entwicklung intelligenter Softwaresysteme.",
-          "Jedes Systemmodul, jede Zeile Code ist genau so, wie sie sein soll."
-        ].join(' ')
+          "Jedes Systemmodul, jede Zeile Code ist genau so, wie sie sein soll.",
+        ].join(" "),
       },
       {
         title: "Wir sind eine Boutique - mit Absicht.",
         content: [
           "Wie entwickelt ein kleines Team ein komplexes Softwaresystem?",
           "Indem wir Jahrzehnte an Erfahrung mit den besten AI-Tools kombinieren.",
-          "Das bedeutet <em>Produktivität von 10 Personen</em>, ohne die entsprechenden Overhead-Kosten."
-        ].join(' ')
+          "Das bedeutet <em>Produktivität von 10 Personen</em>, ohne die entsprechenden Overhead-Kosten.",
+        ].join(" "),
       },
       {
         title: "Gehen Sie Richtung Zukunft.",
         content: [
           "Ihr Unternehmen sollte Zugang zu den besten Technologien haben - mit nahtloser Integration.",
           "Von <em>maschinellem Lernen</em> über <em>generativer KI</em> zu modernen Webframeworks.",
-          "Wir machen es möglich."
-        ].join(' ')
+          "Wir machen es möglich.",
+        ].join(" "),
       },
-    ]
+    ],
   },
   contact: {
     content: "Kontaktieren Sie uns gern unter",
     email: "info@fasterhorses.tech",
-    calendar: "Oder vereinbaren Sie direkt einen Termin:"
+    calendar: "Oder vereinbaren Sie direkt einen Termin:",
   },
   legal: {
     imprint: {
@@ -74,18 +74,19 @@ const translations = {
         "&nbsp;&nbsp;&nbsp;&nbsp;300316 Timișoara, Rumänien",
         "",
         "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ20240313450008",
-        "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538"
-      ].join('<br/>')
+        "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538",
+      ].join("<br/>"),
     },
     privacy: {
       title: "Datenschutz",
-      content: "Es findet keine personenbezogene Datenverarbeitung statt."
+      content:
+        "Wir respektieren Ihre Privatsphäre und stellen die Einhaltung der Datenschutz-Grundverordnung (DSGVO) sicher. Derzeit erheben, verarbeiten oder speichern wir keine personenbezogenen Daten auf dieser Website. Für weitere Informationen kontaktieren Sie uns bitte über die im Kontakt bereitgestellten Angaben.",
     },
     cookies: {
       title: "Cookies",
-      content: "Es werden keine Cookies eingesetzt."
-    }
-  }
-}; 
+      content: "Es werden keine Cookies eingesetzt.",
+    },
+  },
+};
 
 export default translations;
