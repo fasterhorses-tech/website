@@ -75,6 +75,8 @@ const translations = {
         "",
         "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ20240313450008",
         "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538",
+        "",
+        "&nbsp;&nbsp;&nbsp;&nbsp;Contact: <a href='mailto:info@fasterhorses.tech' className='text-orange-600 hover:underline'>info@fasterhorses.tech</a>",
       ].join("<br/>"),
     },
     privacy: {
