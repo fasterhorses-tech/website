@@ -70,7 +70,7 @@ const translations = {
         "Operated by:",
         "",
         "&nbsp;&nbsp;&nbsp;&nbsp;Faster Horses Technologies SRL",
-        "&nbsp;&nbsp;&nbsp;&nbsp;C. Bolliac 31",
+        "&nbsp;&nbsp;&nbsp;&nbsp;C. Bolliac 31, Ap. 1.",
         "&nbsp;&nbsp;&nbsp;&nbsp;300316 Timișoara, Romania",
         "",
         "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ20240313450008",
