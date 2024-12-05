@@ -86,6 +86,24 @@ const translations = {
       title: "Cookies",
       content: "No cookies are used.",
     },
+    refunds: {
+      title: "Refund and Dispute Policy",
+      content: [
+        "We are committed to delivering high-quality software development services ",
+        "that meet your project requirements. Before starting any project, we provide ",
+        "a detailed proposal outlining the scope of work, timeline, and pricing.",
+        "Unless otherwise agreed, payment is structured in milestone-based installments.<br/><br/>",
+        "In the event of any concerns, clients must report issues in writing within 2 sprint cycles ",
+        "of project milestone delivery. We will review the concern and propose appropriate solutions, ",
+        "which may include corrections or modifications to ensure the project meets the originally ",
+        "agreed specifications. Refunds are not typically provided for projects in progress or ",
+        "completed work that meets the agreed-upon requirements. However, we are dedicated to ",
+        "client satisfaction and will work diligently to resolve any discrepancies.<br/><br/>",
+        "For any disputes that cannot be resolved through direct communication, both parties agree ",
+        "to seek resolution through professional mediation. Our goal is to maintain transparency, ",
+        "quality, and mutual understanding throughout the development process.",
+      ].join(""),
+    },
   },
 };
 

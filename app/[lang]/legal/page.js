@@ -32,6 +32,11 @@ export default function Legal({ params: { lang } }) {
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{t('legal.cookies.title')}</h2>
             <p><Markdown>{t('legal.cookies.content')}</Markdown></p>
           </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">{t('legal.refunds.title')}</h2>
+            <p><Markdown>{t('legal.refunds.content')}</Markdown></p>
+          </section>
         </div>
       </main>
       {footer}
