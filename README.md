@@ -1,61 +1,36 @@
-## Notes
+## How does this work?
 
-- installed default nextjs project with `npx create-next-app@latest my-project --eslint`
-- confirmed usage of tailwindcss
-- ran successfully using `npm run dev`
-- added manual i18n setup with page based routing
-- added shadcn/ui components using `npx shadcn-ui@latest init`
-- (was confused here as to the new files and folders created, specifically the lib folder)
-- added next-remote-watch to watch for changes in the content and i18n folders
+There is a single index.pug file from which a lot of HTML whith crucial resources
+already embedded is loaded. Since round trip times can be pretty bad on slow connections,
+we are inlining some things that are necessary to display the page directly. (Fonts, CSS and HTMX)
 
-## Dev
+General principles:
 
-- use `npm run dev` to start the dev server
+- try using as few and as expressive lines of code as possible
+- try to keep small snippets of website code close to each other, so that it's easier to find and modify them
+- try to keep the site as simple as possible, but allow for i18n and lazy loading and small interactivity
+- use folders for navigation, but allow for dynamic loading of subpages using HTMX
 
-## Structure
+Tech stack:
 
-- app contains pages and styles, the structure follows the page structure
-- components contains reusable components
-- i18n contains the translations
-- content contains blog posts and the like
-- shadcn/ui added lib folder (unclear why?)
+- JS script for static site generation in general (see package.json)
+- Pug for templating (see src/index.pug)
+- CSS3 for styling
+- HTMX for dynamic content loading (yes, this can be done with a static site)
+- Alpine.js for small interactivity
 
-## Status Quo
+## Light/dark mode
 
-- added i18n support
-- created hero section w/o graphics so far
-- missing a nice design element
-- do we use the orange-600 color as accent?
-- reduced legal shit into one page
-- next:
-  - find / try out recurring design elements that work (squares? shapes?)
-  - see if the font is working out, maybe change? do we want a more "architecture" look?
-  - add more sections to the home page
-  - check out the structure of the browser company - shall we add a prominent value section?
-  - is the messaging to cringe? (beautiful and love)
-  - do content in a "what cause creates this effect" manner? reduce reduce reduce
-  - for that matter, add a this is your challenge, this is our solution section, protentially with different challenges - classify yourself or w/e
-  - emphasize "intelligent" and cutting edge to the core! we are new, we are young, we are close to the science, we are close to the future!
-  - get more feedback - mito? christian? tektit? truenode? zuzanna?
-  - fix alignment of footer link texts (low prio)
-  - add legal information (low prio)
-- longer term:
-  - add fathom analytics (?) & copy the cookie disclaimer from them
-  - copy over my blog posts / create new ones (?)
+The site automatically switches between light and dark mode depending on the OS's setting.
+We're using the CSS `prefers-color-scheme` media query to detect the OS's setting, and 
+the 'color-scheme' property to set the site's color scheme.
 
-# Deployment
+We're also using the CSS 'light-dark()' function to invert the colors of the site for dark mode.
+Sometimes this is not enough however, so besides that, we're also using Alpine.js to allow the
+user to manually switch between light and dark mode.
+In that case, the "theme-switched" event is dispatched (carrying the theme as a parameter).
 
-- This was supposed to use github's actions to deploy to gh-pages, but that didn't work correctly. (Build didn't run through because of some dependency issue that I can't reproduce locally.)
-- For now, the deployment works as follows:
-  - locally, run `npx next build`
-  - commit all changes to the out folder
-  - push to main
-  - github actions takes over and deploys to github pages
+## NB
 
-# NB.
-
-- green 500
-- yellow 500
-- orange 600 - #ea580c
-- red 600
-- rose 600
+- nodemon is complex shit, just use onchange, does what we need
+- for serving the files, use http-server, simple and works
