@@ -1,0 +1,111 @@
+//- Site config. Access via "locals"
+//- This is a hack to make the langs and lang variables available to the mixins
+- locals.langs = ["en", "de"]
+- locals.lang = "en" // Default language, will be updated when mixins are called
+- locals.title = "Faster Horses Technologies"
+- locals.siteDescription = "Faster Horses Technologies builds intelligent software solutions using a tiny teams of experts, enabled by AI."
+
+
+-
+  const translations = {}
+  for (const lang of locals.langs) {
+    translations[lang] = require(`./src/i18n/translations.${lang}.js`).default
+  }
+
+  t = (key) => {
+    let value = key.split('.').reduce(
+        (previous, current) =>
+          (previous && previous[current]) || null,
+        translations[locals.lang]
+      );
+    return value || key;
+  }
+  
+  pug_this = (str) => pug_render("| " + str, {locals})
+
+  removeLeadingSlash = (path) => path && path.startsWith('/') ? path.slice(1) : path
+  ensureTrailingSlash = (path) => path && path.endsWith('/') ? path : `${path}/`
+  cleanPath = (path) => path && ensureTrailingSlash(removeLeadingSlash(path))
+
+  tURL = (path) => `/${locals.lang}/${cleanPath(path)}`
+  tPartialURL = (path) => tURL(`partials/${cleanPath(path)}`)
+
+
+mixin root
+  file-split(route="/") 
+    - jsStrLangs = JSON.stringify(locals.langs)
+    - jsStrLang = JSON.stringify(locals.lang)
+    doctype html
+    html
+      body
+        script. 
+          var userLang = navigator.language || navigator.userLanguage;
+          var siteLang = userLang in !{jsStrLangs} ? userLang : !{jsStrLang};
+          var defaultUrl = '/' + siteLang;
+
+          console.log("Redirecting to language specific root: " + defaultUrl);
+          window.location.href = defaultUrl;
+
+
+mixin page(route="")
+  each lang in locals.langs
+    - locals.lang = lang
+    file-split(route=`/${lang}/${route}`)
+        doctype html
+        html(lang=lang)
+          head
+            title=locals.title
+            meta(name="description" content=locals.siteDescription)
+            meta(charset="utf-8")
+            meta(http-equiv="X-UA-Compatible", content="IE=edge")
+            meta(name="viewport" content="width=device-width, initial-scale=1")
+            meta(name="color-scheme" content="dark light")
+
+            script
+              :fetch(url="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js")
+            script(src="https://unpkg.com/alpinejs@3.14.8/dist/cdn.min.js" defer)
+
+            style
+              :inject_fonts
+            style
+              include static_inject/global.css
+
+          //- body(x-cloak x-data hx-boost="true")
+          body(hx-boost="true")
+            block 
+  //- We render the body as a partial as well, so it can be loaded using HTMX
+  +partial(route)
+    block
+
+
+mixin page_link(route="")
+  a(
+    href=tURL(route)
+    hx-get=tPartialURL(route)
+    hx-trigger="click"
+    hx-target="body"
+    hx-select=".partial>*"
+    hx-push-url=tURL(route)
+  )&attributes(attributes)
+    block
+
+
+//- HTMX Partials -------------------------------------------------------------
+
+mixin partial(route)
+  each lang in locals.langs
+    - locals.lang = lang
+    file-split(route=`/${lang}/partials/${route}`)
+      doctype html
+      html
+        body
+          //- Partials should redirect to the last visited page if they are accessed directly
+          script.
+            window.location.href = '/!{locals.lang}/';
+
+          .partial(style={display: "none"})
+            block
+
+
+mixin get_partial(path)
+  div(hx-get=tURL(`partials/${path}/`) hx-trigger="load" hx-swap="outerHTML" hx-select=".partial>*")
