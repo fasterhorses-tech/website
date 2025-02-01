@@ -1,0 +1,288 @@
+:root {
+  /* NB: Switch manually by setting the e.g. "prefers-color-scheme: dark" style property on body */
+  color-scheme: light dark;
+
+  /* Colors - don't change unless you know what you're doing */
+  --orange-600: #ea580c;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* This may be changed. */
+  --accent: var(--orange-600);
+
+  --background: light-dark(var(--white), var(--black));
+  --foreground: light-dark(var(--black), var(--white));
+  --middleground: color-mix(in srgb, var(--foreground) 60%, transparent);
+
+  /* Font config - is there a better way? */
+  --josefin: "Josefin Sans", sans-serif;
+  --josefin-wght-normal: 400;
+  --josefin-wght-bold: 600;
+
+  --albert: "Albert Sans", sans-serif;
+  --albert-wght-normal: 300;
+  --albert-wght-bold: 600;
+
+  --top-bottom-margin: 2rem;
+
+  --section-margins-lg: 3rem;
+  --section-margins-sm: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  /* Shenanigans to ensure that the box-sizing is inherited from body. */
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--albert);
+  font-weight: var(--albert-wght-normal);
+  margin: 0;
+
+  box-sizing: border-box; /* Means that padding and border are included in the element's total width and height. */
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--josefin);
+    font-weight: var(--josefin-wght-bold);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    
+    &:hover { color: var(--accent); }
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    section {
+      margin: var(--top-bottom-margin) 0;
+      padding: var(--section-margins-lg) clamp(var(--section-margins-sm), 2vw, var(--section-margins-lg));
+      width: 100%;
+      max-width: 75rem;
+    }
+  }
+
+  .accent { color: var(--accent); }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  
+  padding: 0 1rem;
+  height: 4rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: var(--josefin);
+
+  > .brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+
+    .thin { font-weight: 100; }
+  }
+
+  > nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+
+  /* Adds a background "fading" effect to content underneath the header */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: linear-gradient(to bottom, 
+      var(--background) 0%,
+      color-mix(in srgb, var(--background) 70%, transparent) 70%,
+      color-mix(in srgb, var(--background) 0%, transparent) 100%);
+    z-index: -1;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  
+  padding: 0 1rem;
+  height: 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--middleground);
+
+  > .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  > .lang-select {
+    display: flex;
+    align-items: center;
+
+    .separator { margin: 0 0.25rem; }
+
+    /* NB: This could be extracted. */
+    .theme-switcher {
+      margin-left: 1rem;
+      width: 0.875rem;
+      height: 0.875rem;
+      color: var(--middleground);
+      background-color: currentColor;
+      mask: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='1 1 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.49991 0.876892C3.84222 0.876892 0.877075 3.84204 0.877075 7.49972C0.877075 11.1574 3.84222 14.1226 7.49991 14.1226C11.1576 14.1226 14.1227 11.1574 14.1227 7.49972C14.1227 3.84204 11.1576 0.876892 7.49991 0.876892ZM7.49988 1.82689C4.36688 1.8269 1.82707 4.36672 1.82707 7.49972C1.82707 10.6327 4.36688 13.1725 7.49988 13.1726V1.82689Z' fill='currentColor' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E") center / contain;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  /* Adds a background "fading" effect to content underneath the footer */
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: linear-gradient(to top, 
+      var(--background) 0%,
+      color-mix(in srgb, var(--background) 70%, transparent) 70%,
+      color-mix(in srgb, var(--background) 0%, transparent) 100%);
+    z-index: -1;
+  }
+}
+
+section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--top-bottom-margin) * 2);
+  position: relative;
+  padding: var(--section-margins-lg);
+
+  h1 {
+    margin-right: calc(20%);
+    margin-bottom: clamp(5rem, 0.5rem, 0rem);
+
+    font-size: clamp(1.875rem, 5vw, 3.75rem);
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: left;
+
+    .bold {
+      font-weight: 700;
+      font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    }
+
+    .accent {
+      font-weight: 700;
+    }
+  }
+
+  /* Orange decorative element */
+  &::before {
+    content: '';
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    width: 30vh;
+    height: 30vh;
+    background-color: var(--accent);
+    transform: rotate(30deg);
+    transform-origin: bottom right;
+    z-index: -1;
+  }
+}
+
+section.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem;
+  }
+
+  article.card {
+    position: relative;
+    padding: 2.5rem;
+    
+    @media (min-width: 768px) {
+      padding: 1.5rem;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .design-element {
+        --size: 1.5rem;
+        width: var(--size);
+        height: var(--size);
+        min-width: var(--size);
+        min-height: var(--size);
+        background-color: var(--accent);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+
+    .content {
+      p {
+        line-height: 1.5;
+
+        .accent {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

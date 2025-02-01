@@ -1,0 +1,115 @@
+include _site.pug
+
++root 
+
+
+//- Layout mixins -------------------------------------------------------------
+
+mixin header
+  header
+    +page_link.brand("/") faster#[span.accent horses]#[span.thin .tech] 
+    nav
+      a(href=tURL("/contact"))!= t("navbar.contact")
+
+
+mixin footer
+  footer
+    .links: a(href=tURL("/legal"))!= t("footer.legal")
+    .lang-select
+      each lang in [...locals.langs].sort()
+        if lang === locals.lang
+          span.accent!= t("language." + lang)
+        else
+          a(href=`/${lang}`)!= t("language." + lang)
+        if !lang.endsWith([...locals.langs].sort()[locals.langs.length-1])
+          span.separator |
+      +theme-switcher
+
+
+//- Helper mixins -------------------------------------------------------------
+
+mixin theme-switcher
+  -
+    const switcherState = `{
+      theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+      toggleTheme: () => {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        document.documentElement.style.setProperty('color-scheme', this.theme);
+        $dispatch('theme-switched', { theme: this.theme });
+      }
+    }`
+  button.theme-switcher(
+    x-data=switcherState 
+    @click="toggleTheme()"
+    aria-label="Toggle dark mode"
+  )
+
+
+//- Pages ---------------------------------------------------------------------
+
++page
+  +header
+  main
+    section.hero
+      h1!= pug_this(t("home.hero"))
+
+    section.card-grid
+      each card in t("home.intro_cards")
+        article.card(
+          x-data="{ transform: Math.floor(Math.random() * 360) }"
+          @mouseenter="transform = Math.floor(Math.random() * 360)"
+          @touchstart.passive="transform = Math.floor(Math.random() * 360)")
+          .header
+            .design-element(:style="`transform: rotate(${transform}deg)`")
+            h2!= pug_this(card.title)
+          .content
+            p!= pug_this(card.content)
+  +footer
+
+
++page("legal")
+  +header
+  main
+    section
+      each sect in ['imprint', 'privacy', 'cookies', 'refunds']
+        h1!= pug_this(t("legal." + sect + ".title"))
+        p!= pug_this(t("legal." + sect + ".content"))
+  +footer
+
+
++page("contact")
+  +header
+  main
+    section
+      p
+        != pug_this(t("contact.content")) + ' '
+        a.accent(href="mailto:" + t("contact.email"))!= t("contact.email")
+      p!= pug_this(t("contact.calendar"))
+      -
+        const themeState = `{
+          theme: (
+            (window.getComputedStyle(document.documentElement).getPropertyValue('color-scheme') === 'dark') ||
+            (window.getComputedStyle(document.documentElement).getPropertyValue('color-scheme') === 'light dark' &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) ? 'dark' : 'light'
+        }`
+      iframe(
+        src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3z5yaG6m7gUrmlGtObocrCZD_rg8v1_oRuv6Ll2C1PPrnKe34Ud3qJAubl5niFZp6QxKtKdRg3?gv=true"
+        x-data=themeState
+        x-init="console.log(window.getComputedStyle(document.documentElement).getPropertyValue('color-scheme'))"
+        @theme-switched.window="theme = $event.detail.theme"
+        style={
+          border: '1px solid gray',
+          'border-radius': '10px',
+          'box-shadow': '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+          'background-color': 'white',
+          filter: 'none',
+          height: '60vh'
+        }
+        x-bind:style="{filter: theme === 'dark' ? 'invert(90%)' : 'none'}"
+        width="100%"
+      )
+  +footer
+
+
+
