@@ -261,7 +261,7 @@
     &::before {
       content: '';
       position: absolute;
-      right: 3%;
+      right: 0%;
       bottom: 10%;
       width: var(--hero-decoration-size);
       height: var(--hero-decoration-size);
