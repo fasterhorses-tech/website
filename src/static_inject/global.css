@@ -253,6 +253,10 @@
       line-height: var(--leading-tight);
       text-align: left;
 
+      .accent {
+        background-color: color-mix(in srgb, var(--background) 50%, transparent);
+      }
+
       .extra-bold {
         font-size: clamp(var(--text-3xl), 5.5vw, var(--text-5xl));
       }
