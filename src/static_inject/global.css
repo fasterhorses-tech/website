@@ -315,6 +315,67 @@
       }
     }
   }
+
+  section.team-cards {
+    h1 {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(var(--space-md), 4vw, var(--space-2xl));
+      max-width: var(--max-width);
+    }
+
+    article.team-card {
+      position: relative;
+      padding: clamp(var(--space-lg), 2vw, var(--space-2xl));
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-3xl);
+      align-items: start;
+      
+      .profile-image {
+        --size: clamp(8rem, 15vw, 12rem);
+        width: var(--size);
+        height: var(--size);
+        position: relative;
+        transform: rotate(10deg);
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 141.4%;
+          height: 141.4%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-44%, -48%) rotate(-10deg) scaleX(-0.8) scaleY(0.8);
+          background-size: cover;
+          background-position: center;
+          background-image: inherit;
+        }
+      }
+
+      .content-wrapper {
+        .header {
+          margin-bottom: var(--space-md);
+
+          h2 {
+            font-size: var(--text-xl);
+            margin: var(--space-xs) 0 0;
+          }
+        }
+
+        .content p {
+          line-height: 1.5;
+          font-size: var(--text-lg);
+        }
+      }
+    }
+  }
 }
 
 header {

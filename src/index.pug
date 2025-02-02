@@ -9,6 +9,7 @@ mixin header
   header
     +page_link.brand("/") faster#[span.accent horses]#[span.thin .tech] 
     nav
+      +page_link("/about")!= t("navbar.about")
       +page_link("/contact")!= t("navbar.contact")
 
 
@@ -110,6 +111,27 @@ mixin theme-switcher
         x-bind:style="{filter: theme === 'dark' ? 'invert(90%)' : 'none'}"
         width="100%"
       )
+  +footer
+
+
++page("about")
+  +header
+  main
+    section.team-cards
+      h1!= t("about.title")
+      .card-container
+        each member in t("about.team_members")
+          article.team-card
+            .profile-image(
+              style=`background-image: url(${member.image})`
+              role="img"
+              aria-label=member.name
+            )
+            .content-wrapper
+              .header
+                h2!= member.name
+              .content
+                p!= member.description
   +footer
 
 
