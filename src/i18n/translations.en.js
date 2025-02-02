@@ -11,9 +11,9 @@ const translations = {
   },
   home: {
     hero: [
-      "We craft #[span.bold beautiful], #[span.bold intelligent]",
-      "#[span.accent software systems] with #[span.bold expertise]",
-      "and #[span.bold care] that fit your needs.",
+      "We craft #[span.extra-bold beautiful], #[span.extra-bold intelligent]",
+      "#[span.accent.bold software systems] with #[span.extra-bold expertise]",
+      "and #[span.extra-bold care] that fit your needs.",
     ].join(" "),
     intro_cards: [
       {

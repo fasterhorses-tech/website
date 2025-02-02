@@ -11,9 +11,9 @@ const translations = {
   },
   home: {
     hero: [
-      "Wir entwickeln #[span.bold schöne], #[span.bold intelligente]",
-      "#[span.accent Softwaresysteme] mit #[span.bold Expertise]",
-      "und #[span.bold Sorgfalt] die Ihren Bedürfnissen entsprechen",
+      "Wir entwickeln #[span.extra-bold schöne], #[span.extra-bold intelligente]",
+      "#[span.accent.bold Softwaresysteme] mit #[span.extra-bold Expertise]",
+      "und #[span.extra-bold Sorgfalt] die Ihren Bedürfnissen entsprechen",
     ].join(" "),
     intro_cards: [
       {

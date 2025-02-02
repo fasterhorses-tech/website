@@ -9,18 +9,18 @@ mixin header
   header
     +page_link.brand("/") faster#[span.accent horses]#[span.thin .tech] 
     nav
-      a(href=tURL("/contact"))!= t("navbar.contact")
+      +page_link("/contact")!= t("navbar.contact")
 
 
 mixin footer
   footer
-    .links: a(href=tURL("/legal"))!= t("footer.legal")
+    .links: +page_link("/legal")!= t("footer.legal")
     .lang-select
       each lang in [...locals.langs].sort()
         if lang === locals.lang
           span.accent!= t("language." + lang)
         else
-          a(href=`/${lang}`)!= t("language." + lang)
+          +page_link("/", lang)!= t("language." + lang)
         if !lang.endsWith([...locals.langs].sort()[locals.langs.length-1])
           span.separator |
       +theme-switcher
@@ -104,7 +104,8 @@ mixin theme-switcher
           'box-shadow': '0 0 10px 0 rgba(0, 0, 0, 0.1)',
           'background-color': 'white',
           filter: 'none',
-          height: '60vh'
+          height: 'calc(80vh - (var(--space-2xl) * 2))',
+          'margin-top': '0.5rem',
         }
         x-bind:style="{filter: theme === 'dark' ? 'invert(90%)' : 'none'}"
         width="100%"

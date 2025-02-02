@@ -25,10 +25,10 @@
 
   removeLeadingSlash = (path) => path && path.startsWith('/') ? path.slice(1) : path
   ensureTrailingSlash = (path) => path && path.endsWith('/') ? path : `${path}/`
-  cleanPath = (path) => path && ensureTrailingSlash(removeLeadingSlash(path))
+  cleanPath = (path) => removeLeadingSlash(path) && ensureTrailingSlash(removeLeadingSlash(path))
 
-  tURL = (path) => `/${locals.lang}/${cleanPath(path)}`
-  tPartialURL = (path) => tURL(`partials/${cleanPath(path)}`)
+  tURL = (path, lang=locals.lang) => `/${lang}/${cleanPath(path)}`
+  tPartialURL = (path, lang=locals.lang) => tURL(`partials/${cleanPath(path)}`, lang)
 
 
 mixin root
@@ -80,14 +80,14 @@ mixin page(route="")
     block
 
 
-mixin page_link(route="")
+mixin page_link(route="", lang=locals.lang)
   a(
-    href=tURL(route)
-    hx-get=tPartialURL(route)
+    href=tURL(route, lang)
+    hx-get=tPartialURL(route, lang)
     hx-trigger="click"
     hx-target="body"
     hx-select=".partial>*"
-    hx-push-url=tURL(route)
+    hx-push-url=tURL(route, lang)
   )&attributes(attributes)
     block
 
