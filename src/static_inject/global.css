@@ -246,7 +246,7 @@
 
     h1 {
       width: clamp(80%, 105vh, 100%); /* Looks weird, but it works */
-      margin-bottom: clamp(var(--space-sm), 18vh, var(--space-3xl));
+      margin-bottom: clamp(var(--space-sm), 18vh, calc(var(--space-3xl)*2));
       padding: clamp(var(--space-lg), 2vw, var(--space-2xl));
       font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
       font-weight: var(--font-weight-thin);
