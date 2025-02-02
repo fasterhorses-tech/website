@@ -194,6 +194,7 @@ section.hero {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - var(--top-bottom-margin) * 2);
+  min-height: calc(100dvh - var(--top-bottom-margin) * 2);
   position: relative;
   padding: var(--section-margins-lg);
 
