@@ -1,5 +1,6 @@
 const translations = {
   navbar: {
+    about: "Team",
     contact: "Kontakt",
   },
   footer: {
@@ -50,6 +51,23 @@ const translations = {
           "Von #[span.accent maschinellem Lernen] über #[span.accent generativer KI] zu modernen Webframeworks.",
           "Wir machen es möglich.",
         ].join(" "),
+      },
+    ],
+  },
+  about: {
+    title: "Unser Team",
+    team_members: [
+      {
+        name: "Johanna Appel",
+        role: "Senior Consultant & Co-Founder",
+        description: "Johanna ist eine erfahrene Beraterin mit einem starken Fokus auf Kundenorientierung und Prozessoptimierung. Mit ihrer Expertise in der Automatisierung von Prozessen und der Implementierung von KI-Lösungen hat sie einen wesentlichen Beitrag zur Verbesserung der Effizienz und der Effektivität unserer Kunden geleistet.",
+        image: "/static/images/johanna_profile.png",
+      },
+      {
+        name: "Laura Drasovean",
+        role: "Senior Consultant & Co-Founder",
+        description: "Laura ist eine erfahrene Beraterin mit einem starken Fokus auf Kundenorientierung und Prozessoptimierung. Mit ihrer Expertise in der Automatisierung von Prozessen und der Implementierung von KI-Lösungen hat sie einen wesentlichen Beitrag zur Verbesserung der Effizienz und der Effektivität unserer Kunden geleistet.",
+        image: "/static/images/laura_profile.png",
       },
     ],
   },
