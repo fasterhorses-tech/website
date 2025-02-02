@@ -1,8 +1,12 @@
 ## How does this work?
 
-There is a single index.pug file from which a lot of HTML whith crucial resources
-already embedded is loaded. Since round trip times can be pretty bad on slow connections,
-we are inlining some things that are necessary to display the page directly. (Fonts, CSS and HTMX)
+There is a single `index.pug` file, from which a lot of HTML with crucial resources
+already embedded is generated via `index.js`.
+Since round trip times can be pretty bad on slow connections, we are inlining some
+things that are necessary to display the page directly. (Fonts, CSS and HTMX)
+
+This creates a single HTML file which is roughly 140kb unzipped.
+(Some less necessary resources are lazy loaded, like the logo and Alpine.js)
 
 General principles:
 
@@ -13,11 +17,12 @@ General principles:
 
 Tech stack:
 
-- JS script for static site generation in general (see package.json)
-- Pug for templating (see src/index.pug)
-- CSS3 for styling
+- JS script for static site generation in general (see `package.json` and `index.js`)
+- Pug for templating (see `src/index.pug`)
+- CSS3 for styling (see `src/static_inject/global.css`)
 - HTMX for dynamic content loading (yes, this can be done with a static site)
 - Alpine.js for small interactivity
+- pug related small tools and helpers in `src/_site.pug`
 
 ## Light/dark mode
 
