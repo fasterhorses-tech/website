@@ -235,7 +235,7 @@
 
 @layer components {
   section.hero {
-    --hero-decoration-size: 30vh;
+    --hero-decoration-size: clamp(0em,30vh,20em);
     
     display: flex;
     align-items: center;
