@@ -1,5 +1,6 @@
 const translations = {
   navbar: {
+    team: "Team",
     contact: "Contact",
   },
   footer: {
@@ -47,6 +48,32 @@ const translations = {
           "Your business deserves the best technology available - seamlessly integrated.",
           "From #[span.accent machine learning] to #[span.accent generative AI] to modern web technologies.",
           "We are your link to the latest advancements.",
+        ].join(" "),
+      },
+    ],
+  },
+  team: {
+    intro: "We are a small, senior team. Replace the placeholders below with real bios and photos when you are ready.",
+    members: [
+      {
+        name: "Person A",
+        title: "Co-founder · Engineering",
+        linkedin: "https://www.linkedin.com/in/example-a/",
+        linkedin_label: "LinkedIn",
+        image: "/static/team/person-a.svg",
+        bio: [
+          "Short bio for Person A: focus, background, and what they bring to client projects.",
+          "You can use #[span.accent inline emphasis] and multiple sentences.",
+        ].join(" "),
+      },
+      {
+        name: "Person B",
+        title: "Co-founder · Product & delivery",
+        linkedin: "https://www.linkedin.com/in/example-b/",
+        linkedin_label: "LinkedIn",
+        image: "/static/team/person-b.svg",
+        bio: [
+          "Short bio for Person B: how they work with clients and what they care about building.",
         ].join(" "),
       },
     ],

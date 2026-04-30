@@ -1,5 +1,6 @@
 const translations = {
   navbar: {
+    team: "Team",
     contact: "Kontakt",
   },
   footer: {
@@ -49,6 +50,32 @@ const translations = {
           "Ihr Unternehmen sollte Zugang zu den besten Technologien haben - mit nahtloser Integration.",
           "Von #[span.accent maschinellem Lernen] über #[span.accent generativer KI] zu modernen Webframeworks.",
           "Wir machen es möglich.",
+        ].join(" "),
+      },
+    ],
+  },
+  team: {
+    intro: "Wir sind ein kleines, erfahrenes Team. Ersetzen Sie die Platzhalter unten durch echte Texte und Fotos, sobald Sie soweit sind.",
+    members: [
+      {
+        name: "Person A",
+        title: "Mitgründerin · Engineering",
+        linkedin: "https://www.linkedin.com/in/example-a/",
+        linkedin_label: "LinkedIn",
+        image: "/static/team/person-a.svg",
+        bio: [
+          "Kurzbiografie für Person A: Schwerpunkt, Hintergrund und was sie in Kundenprojekten einbringt.",
+          "Sie können #[span.accent Hervorhebungen] und mehrere Sätze nutzen.",
+        ].join(" "),
+      },
+      {
+        name: "Person B",
+        title: "Mitgründer · Produkt & Umsetzung",
+        linkedin: "https://www.linkedin.com/in/example-b/",
+        linkedin_label: "LinkedIn",
+        image: "/static/team/person-b.svg",
+        bio: [
+          "Kurzbiografie für Person B: wie sie mit Kund:innen arbeitet und was sie am Bauen schätzt.",
         ].join(" "),
       },
     ],

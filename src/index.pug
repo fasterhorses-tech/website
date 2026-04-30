@@ -9,6 +9,7 @@ mixin header
   header
     +page_link.brand("/") faster#[span.accent horses]#[span.thin .tech] 
     nav
+      +page_link("/team")!= t("navbar.team")
       +page_link("/contact")!= t("navbar.contact")
 
 
@@ -74,6 +75,30 @@ mixin theme-switcher
       each sect in ['imprint', 'privacy', 'cookies', 'refunds']
         h1!= pug_this(t("legal." + sect + ".title"))
         p!= pug_this(t("legal." + sect + ".content"))
+  +footer
+
+
++page("team")
+  +header
+  main.team-page
+    section.team-intro
+      p.lead!= pug_this(t("team.intro"))
+    each member, memberIdx in t("team.members")
+      section.team-member(aria-labelledby="team-member-" + memberIdx)
+        .team-member__inner
+          img.team-member__photo(
+            src=member.image
+            alt=member.name
+            width="320"
+            height="320"
+            loading="lazy"
+          )
+          .team-member__body
+            h2.team-member__name(id="team-member-" + memberIdx)!= member.name
+            p.team-member__title!= member.title
+            p.team-member__links
+              a.accent(href=member.linkedin rel="noopener noreferrer" target="_blank")!= member.linkedin_label
+            p.team-member__bio!= pug_this(member.bio)
   +footer
 
 
