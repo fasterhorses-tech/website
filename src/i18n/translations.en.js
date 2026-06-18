@@ -1,5 +1,6 @@
 const translations = {
   navbar: {
+    about: "Team",
     contact: "Contact",
   },
   footer: {
@@ -48,6 +49,23 @@ const translations = {
           "From #[span.accent machine learning] to #[span.accent generative AI] to modern web technologies.",
           "We are your link to the latest advancements.",
         ].join(" "),
+      },
+    ],
+  },
+  about: {
+    title: "Our Team",
+    team_members: [
+      {
+        name: "Johanna Appel",
+        role: "Senior Consultant & Co-Founder",
+        description: "Johanna is an experienced consultant with a strong focus on customer orientation and process optimization. With her expertise in automating processes and implementing AI solutions, she has made a significant contribution to improving the efficiency and effectiveness of our customers.",
+        image: "/static/images/johanna_profile.png",
+      },
+      {
+        name: "Laura Drasovean",
+        role: "Senior Consultant & Co-Founder",
+        description: "Laura is an experienced consultant with a strong focus on customer orientation and process optimization. With her expertise in automating processes and implementing AI solutions, she has made a significant contribution to improving the efficiency and effectiveness of our customers.",
+        image: "/static/images/laura_profile.png",
       },
     ],
   },
