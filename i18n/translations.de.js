@@ -73,7 +73,7 @@ const translations = {
         "&nbsp;&nbsp;&nbsp;&nbsp;C. Bolliac 31",
         "&nbsp;&nbsp;&nbsp;&nbsp;300316 Timișoara, Rumänien",
         "",
-        "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ20240313450008",
+        "&nbsp;&nbsp;&nbsp;&nbsp;EUID: ROONRCJ2024031345008",
         "&nbsp;&nbsp;&nbsp;&nbsp;Ident. Nr: RO 50703538"
       ].join('<br/>')
     },
